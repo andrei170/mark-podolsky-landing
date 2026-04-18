@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mark Podolsky — Flight School | The Land Geek</title>
+<meta name="description" content="5,500+ land deals since 2001. Close your first land deal in 16 weeks or the program is free and we buy your land. Apply for Flight School.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fraunces:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#0d120b;--bg-2:#141b11;--surface:#1a2317;--surface-2:#1f2a1a;--line:rgba(184,158,92,.14);
+--text:#f1ecdc;--muted:#9aa088;--moss:#5e6f3a;--olive:#8a9a4a;--gold:#c79f48;--gold-2:#e3c277;--gold-3:#f1dba0;--deep:#223420
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle,rgba(199,159,72,.03) 1px,transparent 1px);background-size:30px 30px;pointer-events:none;z-index:0}
+body::after{content:'';position:fixed;top:-25%;left:50%;transform:translateX(-50%);width:90%;height:70%;background:radial-gradient(ellipse,rgba(138,154,74,.1) 0%,transparent 60%);pointer-events:none;z-index:0}
+.container{max-width:1180px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+nav{padding:26px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(13,18,11,.94);backdrop-filter:blur(14px);z-index:100}
+.nav-inner{display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Fraunces',serif;font-weight:700;font-size:24px;letter-spacing:-.01em}
+.logo span{color:var(--gold-2);font-style:italic}
+.nav-cta{padding:10px 22px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-2) 100%);color:#0d120b;border-radius:6px;text-decoration:none;font-weight:700;font-size:14px}
+section{padding:100px 0;position:relative}
+.eyebrow{display:inline-block;padding:6px 14px;background:rgba(199,159,72,.1);border:1px solid rgba(199,159,72,.3);border-radius:20px;font-size:11px;font-weight:600;color:var(--gold-2);letter-spacing:.2em;text-transform:uppercase;margin-bottom:24px}
+h1{font-family:'Fraunces',serif;font-size:clamp(42px,6vw,76px);font-weight:700;line-height:1.03;letter-spacing:-.02em;margin-bottom:24px}
+h1 em{font-style:italic;color:var(--gold-2)}
+h2{font-family:'Fraunces',serif;font-size:clamp(32px,4vw,48px);font-weight:700;line-height:1.15;letter-spacing:-.01em;margin-bottom:20px}
+h3{font-size:22px;font-weight:700;margin-bottom:14px;color:var(--text)}
+p{color:var(--muted);font-size:17px;max-width:680px}
+.hero{padding-top:80px;text-align:center}
+.hero p{font-size:20px;margin:0 auto 40px;max-width:720px}
+.cta-primary{display:inline-block;padding:18px 38px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-2) 100%);color:#0d120b;text-decoration:none;border-radius:8px;font-weight:700;font-size:16px;box-shadow:0 10px 40px rgba(199,159,72,.25);transition:.2s}
+.cta-primary:hover{transform:translateY(-2px)}
+.vsl-box{max-width:920px;margin:60px auto;aspect-ratio:16/9;background:linear-gradient(135deg,var(--surface) 0%,var(--deep) 100%);border:1px solid var(--line);border-radius:14px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.vsl-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at center,rgba(199,159,72,.12) 0%,transparent 65%)}
+.play-btn{width:92px;height:92px;border-radius:50%;background:rgba(199,159,72,.15);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;z-index:1;transition:.3s}
+.play-btn:hover{background:rgba(199,159,72,.25);transform:scale(1.05)}
+.play-btn svg{width:34px;height:34px;fill:var(--gold-2);margin-left:5px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin:80px 0 0;padding:40px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat-num{font-family:'Fraunces',serif;font-size:42px;font-weight:700;color:var(--gold-2);letter-spacing:-.02em}
+.stat-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin-top:6px}
+.problem-grid,.pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:50px}
+.pillar-grid{grid-template-columns:repeat(4,1fr)}
+.card{padding:34px;background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:14px;transition:.3s}
+.card:hover{border-color:rgba(199,159,72,.35);transform:translateY(-3px)}
+.card-num{font-size:12px;color:var(--gold-2);font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px}
+.card p{font-size:15px}
+.divider{height:1px;background:linear-gradient(90deg,transparent 0%,var(--line) 50%,transparent 100%)}
+.lead-capture{background:linear-gradient(135deg,rgba(138,154,74,.1) 0%,rgba(199,159,72,.06) 100%);border:1px solid rgba(199,159,72,.25);border-radius:20px;padding:70px 60px;text-align:center;margin:80px 0}
+.lead-capture h2{max-width:680px;margin:0 auto 20px}
+.form-row{display:flex;gap:12px;max-width:520px;margin:36px auto 0}
+.form-row input{flex:1;padding:18px 22px;background:var(--bg);border:1px solid var(--line);border-radius:8px;color:var(--text);font-size:15px;font-family:inherit}
+.form-row input:focus{outline:none;border-color:var(--gold)}
+.form-row button{padding:18px 32px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-2) 100%);color:#0d120b;border:none;border-radius:8px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit}
+.proof-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px}
+.proof-card{padding:32px;background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:14px}
+.proof-quote{font-family:'Fraunces',serif;font-size:22px;line-height:1.35;color:var(--text);font-weight:500;margin-bottom:18px}
+.proof-quote em{color:var(--gold-2);font-style:italic}
+.proof-who{font-size:14px;color:var(--muted);padding-top:16px;border-top:1px solid var(--line)}
+.proof-who strong{color:var(--text);font-weight:600}
+.offer-box{background:linear-gradient(135deg,var(--deep) 0%,var(--surface-2) 100%);border:1px solid rgba(199,159,72,.3);border-radius:20px;padding:60px;margin-top:40px;position:relative;overflow:hidden}
+.offer-box::before{content:'';position:absolute;top:-40%;right:-10%;width:60%;height:80%;background:radial-gradient(circle,rgba(199,159,72,.12) 0%,transparent 60%)}
+.offer-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:start;position:relative;z-index:1}
+.offer-tag{display:inline-block;padding:6px 14px;background:rgba(199,159,72,.15);border:1px solid rgba(199,159,72,.35);border-radius:20px;font-size:11px;font-weight:700;color:var(--gold-2);letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px}
+.offer-headline{font-family:'Fraunces',serif;font-size:36px;font-weight:700;line-height:1.1;margin-bottom:16px}
+.feature-list{list-style:none;margin-top:24px}
+.feature-list li{padding:10px 0;color:var(--text);display:flex;align-items:flex-start;gap:12px;font-size:15px}
+.feature-list li::before{content:'';width:18px;height:18px;border-radius:50%;background:rgba(199,159,72,.2);border:1.5px solid var(--gold);flex-shrink:0;margin-top:3px;position:relative}
+.feature-list li::after{content:'';position:absolute;width:5px;height:9px;border-right:2px solid var(--gold-2);border-bottom:2px solid var(--gold-2);transform:rotate(45deg);margin-left:6px;margin-top:5px}
+.guarantee-box{background:linear-gradient(135deg,rgba(138,154,74,.12) 0%,rgba(34,52,32,.4) 100%);border:1px solid rgba(138,154,74,.35);border-radius:14px;padding:32px;text-align:center}
+.guarantee-box .eyebrow{background:rgba(138,154,74,.15);border-color:rgba(138,154,74,.35);color:#c2d182}
+.guarantee-box h3{font-family:'Fraunces',serif;font-size:26px;margin-bottom:14px}
+.guarantee-box p{margin:0 auto;font-size:15px;color:var(--muted)}
+.bio{display:grid;grid-template-columns:1fr 1.5fr;gap:60px;align-items:center}
+.bio-img{aspect-ratio:4/5;background:linear-gradient(135deg,var(--surface) 0%,var(--deep) 100%);border:1px solid var(--line);border-radius:16px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px;text-align:center;padding:20px}
+.faq-item{border-bottom:1px solid var(--line);padding:24px 0;cursor:pointer}
+.faq-q{display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:18px;color:var(--text);gap:20px}
+.faq-plus{width:24px;height:24px;position:relative;flex-shrink:0}
+.faq-plus::before,.faq-plus::after{content:'';position:absolute;background:var(--gold-2);top:50%;left:50%;transition:.3s}
+.faq-plus::before{width:14px;height:2px;transform:translate(-50%,-50%)}
+.faq-plus::after{width:2px;height:14px;transform:translate(-50%,-50%)}
+.faq-item.open .faq-plus::after{transform:translate(-50%,-50%) rotate(90deg);opacity:0}
+.faq-a{max-height:0;overflow:hidden;transition:.3s}
+.faq-item.open .faq-a{max-height:400px;padding-top:14px}
+.footer{padding:60px 0;border-top:1px solid var(--line);text-align:center}
+.footer p{margin:0 auto;font-size:14px}
+@media(max-width:768px){
+.problem-grid,.pillar-grid,.stats,.proof-grid{grid-template-columns:1fr}
+.offer-grid,.bio{grid-template-columns:1fr}
+.lead-capture,.offer-box{padding:40px 24px}
+.form-row{flex-direction:column}
+section{padding:70px 0}
+.stats{gap:20px}
+}
+.reveal{opacity:0;transform:translateY(30px);transition:.8s}
+.reveal.in{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<nav>
+<div class="container nav-inner">
+<div class="logo">THE LAND <span>GEEK</span></div>
+<a href="#apply" class="nav-cta">Book A Freedom Session</a>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+<div class="eyebrow reveal">FLIGHT SCHOOL · 16 WEEKS</div>
+<h1 class="reveal">Real Estate Without <em>Tenants, Toilets,</em> Or Termites</h1>
+<p class="reveal">5,500+ land deals closed since 2001. The land investing system that helped a 52-year-old IT manager replace his salary in 11 months. Now I'll walk you through the exact method, step by step.</p>
+<div class="vsl-box reveal">
+<div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+</div>
+<a href="#apply" class="cta-primary reveal">Book A Freedom Session</a>
+<div class="stats reveal">
+<div><div class="stat-num">5,500+</div><div class="stat-label">Deals Closed</div></div>
+<div><div class="stat-num">25 yrs</div><div class="stat-label">Full-Time Investor</div></div>
+<div><div class="stat-num">4.5M+</div><div class="stat-label">Podcast Downloads</div></div>
+<div><div class="stat-num">180-Day</div><div class="stat-label">Skin In The Game Guarantee</div></div>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+<div class="container">
+<div class="eyebrow reveal">THE REAL ESTATE PROBLEM</div>
+<h2 class="reveal">Most "Passive Income" Real Estate<br>Is Not Actually Passive</h2>
+<p class="reveal" style="font-size:18px">Rental houses, short-term rentals, flipping. All three come with tenants, repairs, property managers who don't manage, and midnight phone calls. Vacant land does none of that.</p>
+<div class="problem-grid">
+<div class="card reveal"><div class="card-num">KILLER 01</div><h3>Tenants + Termites</h3><p>Rental real estate breaks when a furnace dies at 2 a.m. or an eviction drags on for six months. Land has no tenants, no repairs, no maintenance calls.</p></div>
+<div class="card reveal"><div class="card-num">KILLER 02</div><h3>Thin Cash Flow</h3><p>After mortgage, insurance, taxes, and management, most rentals cash-flow $150 a month. Land sold on terms cash-flows hundreds per parcel with no expenses.</p></div>
+<div class="card reveal"><div class="card-num">KILLER 03</div><h3>Capital-Heavy Entry</h3><p>A rental in a growing metro costs $300K+ and 20% down. A raw parcel costs $500 to $5,000 cash. The barrier to entry is almost zero.</p></div>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+<div class="container">
+<div class="eyebrow reveal">THE METHOD</div>
+<h2 class="reveal">The 4-Step Land Geek System,<br>Run Over 5,500 Times</h2>
+<div class="pillar-grid">
+<div class="card reveal"><div class="card-num">STEP 1</div><h3>Find Motivated Sellers</h3><p>County tax-delinquent lists, out-of-state owners, inherited property lists. Owners who don't want the land and are waiting for someone to take it off their hands.</p></div>
+<div class="card reveal"><div class="card-num">STEP 2</div><h3>Offer 25-30 Cents</h3><p>Direct mail at 25 to 30 cents on the dollar. High volume, predictable response. The math works because most sellers are burnt out on paying taxes.</p></div>
+<div class="card reveal"><div class="card-num">STEP 3</div><h3>Close Cheap + Fast</h3><p>Most parcels close in under two weeks through a title company or a simple notarized deed. Paperwork is templated inside Flight School.</p></div>
+<div class="card reveal"><div class="card-num">STEP 4</div><h3>Resell On Terms</h3><p>List at 3x to 10x what you paid. Take a down payment, finance the rest for 60-120 months. You become the bank. Monthly income. Zero maintenance.</p></div>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+<div class="container">
+<div class="eyebrow reveal">STUDENT PROOF</div>
+<h2 class="reveal">What The Method Actually Produces</h2>
+<div class="proof-grid">
+<div class="proof-card reveal">
+<p class="proof-quote">"Bought a parcel for <em>$3,600</em>. Sold it for <em>$37,500</em> on terms. $2,500 down, $389 a month for 84 months."</p>
+<p class="proof-who"><strong>Mark Wilson</strong> — Flight School graduate</p>
+</div>
+<div class="proof-card reveal">
+<p class="proof-quote">"<em>8 weeks in</em> I had $1K a month in passive income. Twelve months in, I quit my W-2."</p>
+<p class="proof-who"><strong>Scott Bradford</strong> — Former engineer, New Mexico</p>
+</div>
+<div class="proof-card reveal">
+<p class="proof-quote">"From <em>1 deal to 14 deals</em> in just 5 months, working a single Texas county."</p>
+<p class="proof-who"><strong>Brandon Crookshanks</strong> — Flight School graduate</p>
+</div>
+<div class="proof-card reveal">
+<p class="proof-quote">"<em>500% ROI on my first deal.</em> I had never done real estate before Flight School."</p>
+<p class="proof-who"><strong>Kevin Levy</strong> — Former IT manager, Phoenix</p>
+</div>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+<div class="container">
+<div class="lead-capture reveal">
+<div class="eyebrow">FREE RESOURCE</div>
+<h2>The Dirt Rich Launch Kit</h2>
+<p style="margin:0 auto">The first-move playbook for a new land investor. County research, offer letters, pricing formulas. Zero fluff, no wall.</p>
+<form class="form-row" onsubmit="event.preventDefault();alert('Check your inbox — kit sent.')">
+<input type="email" placeholder="Enter your email" required>
+<button type="submit">Send Me The Kit</button>
+</form>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<section id="apply">
+<div class="container">
+<div class="eyebrow reveal">THE PROGRAM</div>
+<h2 class="reveal">Flight School</h2>
+<div class="offer-box reveal">
+<div class="offer-grid">
+<div>
+<div class="offer-tag">16-Week Live Program</div>
+<div class="offer-headline">Close Your First Land Deal In 16 Weeks, Or We Refund You And Buy Your Inventory</div>
+<p style="margin-top:16px">Flight School is the only program where I hand you the full system, walk you through it week by week with my coaches, and back the whole thing with a 180-day results guarantee. Investment is discussed on the Freedom Session call. Most accepted applicants qualify for a payment plan.</p>
+<ul class="feature-list">
+<li>11 video modules covering the full Land Geek Method</li>
+<li>16 weeks of live weekly office hours with Scott Todd and Tate Litchfield</li>
+<li>Two 30-min 1-on-1 coaching sessions with Mark or Scott</li>
+<li>6 months free access to LG PASS (our proprietary software)</li>
+<li>Two years of free bootcamp tickets (virtual and in-person)</li>
+<li>Dirt Rich Starter Kit + full paperwork library included</li>
+<li>24/7 AI support trained on the entire Land Geek knowledge base</li>
+<li>Your first mailing list acquired and cleaned for you (250 names)</li>
+<li>Access to 200+ recorded mastermind calls</li>
+</ul>
+</div>
+<div>
+<div class="guarantee-box">
+<div class="eyebrow">SKIN IN THE GAME</div>
+<h3>180-Day Results Guarantee</h3>
+<p>Complete the coursework in 180 days. If you haven't recouped the program cost through deals, we refund your tuition in full AND buy any land you've acquired using our pricing model. You walk away whole either way.</p>
+<a href="#apply" class="cta-primary" style="margin-top:24px;display:inline-block">Book Freedom Session</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+<div class="container">
+<div class="bio">
+<div class="bio-img reveal">[Mark's headshot at his Phoenix office]</div>
+<div class="reveal">
+<div class="eyebrow">ABOUT MARK</div>
+<h2>25 Years. 5,500 Deals. Zero Tenants.</h2>
+<p style="font-size:17px;margin-top:20px">In 2001, I quit my investment banking job in Phoenix. I hated the commute, the bosses, and the 3% raises. I bought one rental property to escape and quickly learned it was a second job, not an asset.</p>
+<p style="margin-top:16px">Then I found raw land. I bought my first parcel for $300 at a tax auction and sold it two weeks later for $1,800. Something clicked. Twenty-five years and over 5,500 deals later, I still don't own a single rental. I run Frontier Equity Properties, host The Art of Passive Income podcast (4.5M+ downloads), and teach the system to hundreds of Flight School students worldwide.</p>
+</div>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+<div class="container" style="max-width:820px">
+<div class="eyebrow reveal">FAQ</div>
+<h2 class="reveal">Common Questions</h2>
+<div style="margin-top:40px">
+<div class="faq-item reveal" onclick="this.classList.toggle('open')">
+<div class="faq-q"><span>How much capital do I need to start?</span><div class="faq-plus"></div></div>
+<div class="faq-a"><p>Most students start with $3,000 to $10,000 in working capital. Parcels cost $500 to $5,000 each. You don't need a mortgage, a loan, or a down payment partner.</p></div>
+</div>
+<div class="faq-item reveal" onclick="this.classList.toggle('open')">
+<div class="faq-q"><span>How long until I close my first deal?</span><div class="faq-plus"></div></div>
+<div class="faq-a"><p>Most Flight School students close their first parcel between week 6 and week 12. The 180-day guarantee is our line in the sand: complete the work, close deals, or we refund you and buy your inventory.</p></div>
+</div>
+<div class="faq-item reveal" onclick="this.classList.toggle('open')">
+<div class="faq-q"><span>Do I need real estate experience?</span><div class="faq-plus"></div></div>
+<div class="faq-a"><p>No. Most of our students have never done a real estate deal before Flight School. That's by design. The system is built for W-2 professionals, not career investors.</p></div>
+</div>
+<div class="faq-item reveal" onclick="this.classList.toggle('open')">
+<div class="faq-q"><span>What's the time commitment per week?</span><div class="faq-plus"></div></div>
+<div class="faq-a"><p>5 to 8 hours per week during the 16 weeks. Modules on your own pace, one live office hour, then implementation in your market. It runs alongside a full-time job.</p></div>
+</div>
+<div class="faq-item reveal" onclick="this.classList.toggle('open')">
+<div class="faq-q"><span>How does the 180-day guarantee actually work?</span><div class="faq-plus"></div></div>
+<div class="faq-a"><p>Complete the Flight School coursework in the first 180 days. If you haven't recouped the program investment through deals you closed during that window, we refund your tuition in full. In addition, any land parcels you acquired during the program that haven't resold, we will buy from you at our pricing model. You walk away whole.</p></div>
+</div>
+<div class="faq-item reveal" onclick="this.classList.toggle('open')">
+<div class="faq-q"><span>Who is Flight School NOT for?</span><div class="faq-plus"></div></div>
+<div class="faq-a"><p>People looking for overnight returns, fully hands-off income from week one, or a push-button SaaS. Land investing rewards consistency over 16 weeks. If you want instant, this isn't it.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<section style="text-align:center">
+<div class="container">
+<h2 class="reveal">Your Freedom Session</h2>
+<p class="reveal" style="margin:20px auto 40px">30 minutes. No pressure. We walk through your situation, the math, and whether Flight School is the right fit. If it's not, we'll tell you and point you toward the right starting point.</p>
+<a href="#apply" class="cta-primary reveal">Book A Freedom Session</a>
+</div>
+</section>
+
+<footer class="footer">
+<div class="container">
+<p>© 2026 The Land Geek · Frontier Equity Properties · Phoenix, AZ</p>
+</div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(e=>obs.observe(e));
+</script>
+</body>
+</html>
